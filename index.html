@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en-US">
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="css/custom.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css">
+	<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Tangerine">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<head>
+		<title>My Blog</title>
+	</head>
+	<body>
+		<nav class="navbar navbar-inverse" style="margin-bottom:0px">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span> 
+					</button>
+					<a class="navbar-brand" href="#" style="font-size:2em;font-weight:bold;font-family:'Tangerine', serif;">My Blog</a>
+				</div>
+				<div class="collapse navbar-collapse" id="myNavbar">
+					<ul class="nav navbar-nav navbar-right">
+						<li class="active"><a href="#">Home</a></li>
+						<li><a href="aboutMe.html">About Me</a></li>
+						<li><a href="contactMe.html">Contact</a></li>
+						<li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+						<li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+		<div class="jumbotron" style="padding-bottom:0px; text-align:center;opacity:0.5;color:#6a9ca7">
+			<h1 style="font-weight:bold;font-family:'Tangerine',serif;font-size:8em">Nomad on the Road!</h1>
+			<hr class="my-4">
+		</div>
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-9">
+					<div class="box thumbnail">
+						<span style="font-family:‘Lucida Console’, Monaco, monospace;font-weight:bold;font-size:2em;color:#6a9ca7">Heaven</span><br/>
+						<span style="font-family:‘Lucida Console’, Monaco, monospace;font-size:1em">26th February, 2017</span>
+						<img src="/images/Scene.jpg" class="img-responsive"/><br />
+						<div style="text-align:justify;line-height:2em;font-family:Calibri">Want to know why it's important to have checks
+						on mass surveillance programs?
+						Colombia should serve as a good example. Privacy International reports that the country
+						not only collects bulk internet and phone data on a grand scale, but violates the law in
+						the process -- it's supposed to require judicial approval for any surveillance, but regularly
+						ignores that oversight. Colombian agencies have also relied on controversial tools like IMSI
+						catchers (which scoop up nearby cellphone data) and Hacking Team's spyware, and they've sought
+						to expand their powers rather than rein things in.<br/>
+						It's no secret that Colombia has a history of surveillance, fueled in no small part by its
+						decades-long battles with rebels and drug cartels. And unfortunately, the pressure to keep
+						an eye on communications isn't likely to drop anytime soon. A Venezuelan immigrant crackdown
+						has forced many Colombia-born residents back to their homeland, increasing tensions between the
+						two countries. It may take a long while before the political climate is truly conducive to surveillance reform.
+						</div>
+						<hr class="my-4">
+						<form ng-app ="commentApp" ng-controller="FrmController">
+							<div class="form-group">
+								<label for="comments" style="font-family:‘Lucida Console’, Monaco, monospace;font-weight:bold;font-size:2em;color:#6a9ca7">
+								Comments:</label>
+								<textarea ng-model="txtcomment" class="form-control" placeholder="Comment here" rows="1" id="comments"></textarea>
+								<button ng-click='btn_add();' class="btn btn-primary btn-md" style="background-color:#6a9ca7;
+								font-family:Lucida Console’, Monaco, monospace; font-weight:bold;margin-top:1%;margin-bottom:1%">Post</button>
+								<ul class="" style="list-style:none;" >
+									<li ng-repeat="comnt in comment" style="font-family:Calibri; font-size:1.2em"> {{ comnt }}
+										<a  style="float: right;" href="" ng-click="remItem($index)">x</a>
+									</li>
+								</ul>
+							</div>
+						</form>
+					</div>
+				</div>
+				<div class="col-sm-3">
+					<div class="box">
+						<span style="font-family:Georgia,serif;;font-size:1.1em;color:#6a9ca7">ABOUT ME</span><br/><br/>
+						<img src="/images/nair.jpg" class="img-responsive"/><br/>
+						<div style="text-align:justify;">I'm a paragraph. Click here to add your own text and edit me.
+						It’s easy. Just click “Edit Text” or double click me to add your own content and make changes to the font.
+						I’m a great place for you to tell a story and let your users know a little more about you.
+						</div>
+						<hr class="my-4">
+						<span style="font-family:Georgia,serif;;font-size:1.1em;color:#6a9ca7">FOLLOW ME</span><br/><br/>
+						<div class="social-icons">
+							<ul class="media_icon">
+								<li><a href="www.facebook.com" class="media_icon"> <i class="fa fa-facebook"></i></a></li>
+								<li><a href="www.linkedin.com" class="media_icon"> <i class="fa fa-linkedin"></i></a></li>
+								<li><a href="www.instragram.com" class="media_icon"> <i class="fa fa-instagram"></i></a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-3">
+					<div class="box">
+						<div style="font-family:'Calibri',sans-serif;font-size:2em;color:#6a9ca7;">Recent Posts</div>
+						<div class="thumbnail">
+							<img src="/images/trees.jpg" class="img-responsive pull-left" style="width:50px;height:50px;margin-right:5px"/>
+							<span> Nature </span><br/>
+							<span> Write text here </span>
+							<hr class="my-4">
+							<img src="/images/mountains.jpg" class="img-responsive pull-left" style="width:50px;height:50px;margin-right:5px"/>
+							<span> Mountains </span><br/>
+							<span> Write text here </span>
+							<hr class="my-4">
+							<img src="/images/flower.jpg" class="img-responsive pull-left" style="width:50px;height:50px;margin-right:5px"/>
+							<span> Flower </span><br/>
+							<span> Write text here </span>
+							<hr class="my-4">
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-3">
+					<div class="box">
+						<div style="font-family:'Calibri',sans-serif;font-size:2em;color:#6a9ca7;">In this article</div>
+						<div class="thumbnail">
+							<div class="btn-group btn-group-xs">
+								<button type="button" class="btn btn-link" style="text-decoration:none;">Beauty</button>
+								<button type="button" class="btn btn-link" style="text-decoration:none;">Nature</button>
+								<button type="button" class="btn btn-link" style="text-decoration:none;">Wild</button>
+								<button type="button" class="btn btn-link" style="text-decoration:none;">Trees</button>
+								<button type="button" class="btn btn-link" style="text-decoration:none;">Thrill</button>
+								<button type="button" class="btn btn-link" style="text-decoration:none;">Adventure</button>
+								<button type="button" class="btn btn-link" style="text-decoration:none;">Travel</button>
+								<button type="button" class="btn btn-link" style="text-decoration:none;">Hike</button>
+								<button type="button" class="btn btn-link" style="text-decoration:none;">Blogger</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script type="text/javascript">
+		var app = angular.module("commentApp", []);
+		app.controller("FrmController", function ($scope) {
+				$scope.comment = [];
+				$scope.btn_add = function() {
+					if($scope.txtcomment !=''){
+					$scope.comment.push($scope.txtcomment);
+					$scope.txtcomment = "";
+					}
+				}
+
+				$scope.remItem = function($index) {
+					$scope.comment.splice($index, 1);
+				}
+			});
+		</script>
+	</body>
+</html>

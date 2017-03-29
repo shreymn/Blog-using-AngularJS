@@ -1,0 +1,63 @@
+body {
+	background-image: url("../images/cool-minty-green-tileable-grunge-patterns-part-2-14.jpg");
+	background-color: rgb(241,241,241);
+}
+.box {
+	max-width:55em;
+	margin: 1em auto;
+	padding: 5px 10px;
+	box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 1);
+}
+.social-icons {
+	display:block;
+}
+.media_icon{
+	color:#000;
+}
+.media_icon li {
+    vertical-align: top;
+    display: inline;
+}
+.media_icon a {
+    color: #000;
+    text-decoration: none;
+}
+.fa {
+	font-size:2.2em !important;
+}
+.fa-facebook {
+    padding:10px 14px;
+    -o-transition:.5s;
+    -ms-transition:.5s;
+    -moz-transition:.5s;
+    -webkit-transition:.5s;
+    transition: .5s;
+	border-radius:15px;
+}
+.fa-facebook:hover {
+    background-color: #3d5b99;
+}
+.fa-instagram {
+    padding:10px 12px;
+    -o-transition:.5s;
+    -ms-transition:.5s;
+    -moz-transition:.5s;
+    -webkit-transition:.5s;
+    transition: .5s;
+	border-radius:15px;
+}
+.fa-instagram:hover {
+    background-color: rgb(222,54,107);
+}
+.fa-linkedin {
+    padding:10px 14px;
+    -o-transition:.5s;
+    -ms-transition:.5s;
+    -moz-transition:.5s;
+    -webkit-transition:.5s;
+    transition: .5s;
+	border-radius:15px;
+}
+.fa-linkedin:hover {
+    background-color: #0073a4;
+}
